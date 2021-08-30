@@ -1,0 +1,21 @@
+{
+    "name": "user/gdlwebcamp_mvc",
+    "description": "Incorporando clases y POO  a proyecto GDLWEBCAMP.",
+    "authors": [
+        {
+            "name": "Beto Fiorani",
+            "email": "betofiorani@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.5",
+        "phpmailer/phpmailer": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./models",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers"
+        }
+    }
+}
