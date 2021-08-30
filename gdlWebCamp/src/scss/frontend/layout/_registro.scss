@@ -1,0 +1,200 @@
+
+.registro {
+
+    h3 {
+        color: $naranja;
+        text-transform: uppercase;
+    }
+
+    h4 {
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 2px solid $naranja;
+        padding-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+    .caja {
+        background-color: $blanco;
+        border: 1px solid $gris;
+        padding: 1rem;
+        .campo {
+            padding: 2rem;
+            width: 100%;
+            input {
+                @include tablet(){
+                    margin-left: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    #datos_usuario {
+        width: 75%;
+        margin: 0 auto;
+        div {
+            @include tablet(){
+                display: flex;
+                justify-content: space-around;    
+                align-items: center;
+            }
+        }
+    }
+
+    .pase {
+        font-size: 1.6rem;
+    }
+
+    .orden {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+            text-align: center;
+            margin-bottom: 0;
+            width: 10rem;
+        }
+    }
+
+    .contenido-dia {
+        padding: 0 2rem;
+        p {
+            font-size: 1.6rem;
+            color: $negro;
+        }
+        @include tablet(){
+            @include grid(3,4rem);
+        }
+        .flex {
+            align-items: center;
+            padding: 1rem 0;
+        }
+        input {
+            width: auto;
+            margin-bottom: 0;
+        }
+        time {
+            margin: 0 1rem;
+            color: $naranja;
+            font-weight: $bold;
+        }
+    }
+}
+
+.resumen {
+    p {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+    .flex {
+        flex-direction: column;
+        justify-content: center;
+        @include tablet(){
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+    .extras {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 0 2rem 0;
+        .orden {
+            flex-direction: row;
+            justify-content: space-between;
+            input {
+                margin-left: 2rem;
+            }
+            select {
+                margin-bottom: 0;
+                width: 50%;
+                @include tablet(){
+                    width: 100%;
+                }
+            }
+        }
+
+        .boton {
+            background-color: $naranja;
+            padding: 1rem 4rem;
+            width: 14rem;
+            border-radius: unset;
+        }
+    }
+}
+.total {
+    @include tablet(){
+        width: 30%;
+        padding: 0 2rem 2rem 2rem;
+    }
+    
+    #lista-productos {
+        background-color: $gris;
+        padding: 2rem;
+        display: none;
+    }
+
+    .titulos {
+        margin-bottom: 2rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        
+    }
+    .sumaTotal {
+        font-size: 3rem;
+        color: $naranja;
+        margin: 0;
+    }
+    input {
+        margin-top: 1rem;
+    }
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    p{
+        margin: 0 5rem;
+        text-align: left;
+        font-size: 1.4rem;
+        color: $negro;
+    }
+    span {
+        &:last-of-type {
+            color: $naranja;
+        }
+    }
+}
+
+.eventos {
+    #viernes,
+    #sabado,
+    #domingo {
+        display: none;
+    }
+}
+
+#error {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.resultado {
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 1rem;
+    p {
+        text-align: center;
+        margin: 0;
+        color: $blanco;
+    }
+}
+
+.correcto {
+    background-color: rgb(2,173,2);
+}
+
+.fracaso {
+    background-color: red;
+}

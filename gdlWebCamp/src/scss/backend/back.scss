@@ -1,0 +1,22 @@
+//@import '../frontend/base/normalize';
+@import '../frontend/base/fontawesome';
+@import '../frontend/base/variables';
+@import '../frontend/base/mixins';
+//@import '../frontend/base/globales';
+//@import '../frontend/base/utilidades';
+@import 'librerias/adminlte.min';
+@import 'librerias/tempusdominus-bootstrap-4.min';
+@import 'librerias/icheck-bootstrap';
+@import 'librerias/jqvmap.min';
+@import 'librerias/OverlayScrollbars.min';
+@import 'librerias/daterangepicker';
+@import 'librerias/summernote';
+@import 'librerias/sweetalert2.min';
+@import 'librerias/dataTables.bootstrap4.min';
+@import 'librerias/buttons.bootstrap4.min';
+@import 'librerias/responsive.bootstrap4.min';
+
+@import 'layout/preload';
+@import 'layout/barraLateral';
+@import 'layout/tablas';
+@import 'layout/formularios';

@@ -1,0 +1,44 @@
+.newsletter {
+    position: relative;
+    .contenido-newsletter {
+        padding: 9rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        span, p, a {
+            color: $blanco;
+            margin: 0;
+        }
+        span {
+            font-size: 1.4rem;
+        }
+        p {
+            font-size: 7rem;
+            line-height: 1.3;
+            font-weight: $bold;
+            font-family: $fuente_principal;
+        }
+    }
+    div {
+        margin-top: 2rem;
+    }
+    .boton-newsletter {
+        background-color: transparent;
+        border: 2px solid $blanco;
+        text-transform: uppercase;
+    }
+    .boton-newsletter:hover {
+        background-color: $naranja;
+        border: 2px solid $naranja;
+    }
+}
+
+.newsletter::before {
+    content: '';
+    background-image: url("../img/bg-newsletter.webp");
+    background-position: top center;
+    -webkit-filter: brightness(.7);
+    filter: brightness(.7);
+}

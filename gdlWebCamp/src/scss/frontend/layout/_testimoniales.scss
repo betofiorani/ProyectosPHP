@@ -1,0 +1,95 @@
+@include tablet(){
+    .testimoniales-contenido {
+        @include grid(3,$separacion/2);
+    }
+}
+
+.testimonio {
+    margin-bottom: 2rem;
+    border: 1px solid $gris;
+    background-color: $blanco;
+    padding: 2rem 4rem;
+    @include tablet(){
+        display: flex;
+        flex-direction: column;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    blockquote {
+        margin: 0;
+        position: relative;
+    }
+    blockquote p::before{
+        content: '\201c';
+        font-family: 'fontawesome';
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        font-size: 8rem;
+        margin: 0;
+        color: $naranja;
+    }
+    .testimonio-texto {
+        margin: 1rem 0;
+        font-size: 1.8rem;
+        font-family: $fuente_secundaria;
+        text-align: justify;
+        padding-left: 6.5rem;
+    }
+    .personaje {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1rem;
+        img {
+            border-radius: 50%;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 1rem;
+            h4 {
+                margin: 0;
+                color: $naranja;
+                text-transform: uppercase;
+                font-size: 1.9rem;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.opiniones{
+    .opinion {
+        background-color: $morado;
+        border-radius: 2rem;
+        padding: $separacion/3;
+        color: $blanco;
+        font-size: 2.1rem;
+        font-weight: $delgada;
+        
+    }
+    blockquote{
+        position: relative;
+        padding-left: 4rem;
+        line-height: 1.4;
+        &::before {
+            content: '';
+            background-image: url('../img/comilla.svg');
+            background-repeat: no-repeat;
+            width: 8rem;
+            height: 6rem;
+            display: block;
+            position: absolute;
+            left: -2.5rem;
+        }
+    }
+    p{
+        text-align: right;
+        color: $blanco;
+    }
+}

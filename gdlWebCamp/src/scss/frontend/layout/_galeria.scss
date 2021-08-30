@@ -1,0 +1,52 @@
+div.invitado-info {
+
+    text-align: center;
+    p{
+        text-align: center;
+    }
+    img {
+        width: auto;
+        display: inline;
+    }
+}
+.galeria-invitados {
+    @include tablet {
+        @include grid(3,1rem);    
+    }
+    .invitado {
+        margin: 1rem 0;
+        position: relative;
+        overflow: hidden;
+        @include tablet(){
+            margin: 0;        
+        }
+        &:hover img {
+            filter: none;
+            -webkit-filter: none;
+            -webkit-transform: scale(1.1);
+        }
+        &:hover p {
+            bottom: -8rem;
+            opacity: 0;
+        }
+        img {
+            width: 100%;
+            margin: 0 auto;
+            filter: gray;
+            -webkit-filter: grayscale(1);
+            transition: all .5s ease-in-out;
+        }
+        p {
+            position: absolute;
+            bottom: 0;
+            text-transform: uppercase;
+            font-family: $fuente_terciaria;
+            width: 100%;
+            background-color: rgba(63,63,63 ,.5);
+            margin: 0;
+            padding: 1rem 2rem;
+            color: $naranja;
+            transition: all .5s ease-in-out;
+        }
+    }           
+}

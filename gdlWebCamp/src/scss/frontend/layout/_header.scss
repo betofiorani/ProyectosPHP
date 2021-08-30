@@ -1,0 +1,110 @@
+.no-webp .inicio{
+    background-image: url('../img/header.jpg');
+}
+.webp .inicio {
+    background-image: url('../img/header.webp');
+}
+
+.hero {
+    background-image: url('../img/encabezado.jpg');
+    background-position: top,center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    max-height: 90rem;
+    .contenido-header {
+        color: $blanco;
+        padding-top: 4rem;
+        .redes-sociales {
+            text-align: center;
+            .fab {
+                color: $casiblanco;
+                font-size: 2rem;
+            }
+            a {
+                padding-right: 2rem;
+            }
+            a:last-of-type{
+                padding-right: 0;
+            }
+        }
+        .informacion-evento {
+            display: flex;
+            justify-content: space-evenly;
+            text-transform: uppercase;
+            p {
+                font-weight: 400;
+                color: $blanco;
+                i {
+                    padding-right: 1rem;
+                    color: $naranja;
+                    font-size: 2.6rem;
+                }
+            }
+            .fecha {
+                
+            }
+            .lugar {
+
+            }
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: $bold;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+            
+            @include tablet(){
+                font-size: 10rem;
+            }
+        }
+        .nombre-sitio {
+            font-family: $fuente_secundaria;
+            span {
+                text-shadow: 0 0 3rem $negro;
+                position: relative;
+            }
+        }
+        .slogan {
+            text-align: center;
+            color: $blanco;
+            margin: 0;
+            span {
+                font-weight: $bold;
+            }
+        }
+    }
+
+}
+    
+    
+// .header {
+//     background-color: $grisOscuro;
+//     padding: 1rem 0 3rem 0;
+    
+//     &.inicio {
+//         background-position: center center;
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         @include tablet(){
+//             min-height: 35rem;
+//         }
+//         .header-contenido {
+//             @include tablet(){
+//                 min-height: 35rem;
+//             }
+//         }
+//     }
+//     .header-contenido{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         h1 {
+//             color: $blanco;
+//             text-align: left;
+//             font-weight: $bold;
+//             line-height: 2;
+//         }
+//     }
+// }

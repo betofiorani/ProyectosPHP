@@ -1,0 +1,67 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: $casiblanco;
+}
+p {
+    color: $negro;
+    font-size: 2rem;
+}
+.contenedor {
+    width: 95%;
+    /*max-width: 120rem;*/
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: $fuente_principal;
+    margin: $separacion/2 0;
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: $fuente_terciaria;
+    font-weight: $bold;
+    font-size: 3.4rem;
+    &::after {
+        content: '';
+        margin: 0 auto;
+        background-image: url("../img/separador.webp");
+        width: 10rem;
+        height: 3rem;
+        display: block;
+    }
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: $naranja;
+    font-family: $fuente_secundaria;
+}
+h4 {
+    font-size: 2.2rem;
+}

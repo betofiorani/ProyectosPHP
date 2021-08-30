@@ -1,0 +1,119 @@
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet(){
+        align-items: flex-end;
+    }
+    .dark-mode-boton {
+        filter: invert(100%);
+        width: 3rem;
+        margin: 2rem 0;
+        @include tablet(){
+            margin: 0 0 2rem 0;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.barra{
+    background-color:#353535;
+    .barra-contenido {
+        padding: 1rem 0;
+        max-width: unset;
+        display: flex;
+        flex-direction: column;
+        @include tablet(){
+            padding: 2rem 0;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .barra-logo {
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .barra-logo img {
+            width: 80%;
+        }
+    }
+    &.fijo {
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 0.3rem .5rem #444444;
+        top: 0;
+        z-index: 2;
+    }
+    
+}
+.barra-navegacion {
+
+}
+.navegacion{
+    .activo {
+        border-bottom: 2px solid $naranja;
+    }
+    height: 0;
+    display: none;
+    @include tablet(){
+        display: flex;
+        visibility: visible;
+        align-items: center;
+        opacity: 1;
+        //gap: 0.5rem; podemos usar gap - no soportado en todos lados.
+    }
+    .navegacion-enlace{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $blanco;
+        font-family: $fuente_terciaria;
+        font-size: 2.2rem;
+        padding: 0 0.5rem;
+        display: block;
+        transition: all .3s ease;
+        margin-right: 1rem;
+        @include tablet(){ // se podría hacer con gap - pero no tiene aún tanto soporte
+            padding: 1.3rem 4rem;
+            &:last-of-type {
+                margin-right: 0;
+                border: 2px solid $naranja;
+                color: $naranja;
+            }
+            &:last-of-type:hover {
+                color: $blanco;
+            }
+        }
+        &:hover {
+            background-color: $naranja;
+            border: 2px solid $naranja;
+        }
+    }
+}
+.mobile-menu {
+    width: 6rem;
+    @include tablet(){
+        display: none;
+    }
+    img {
+        width: 5rem;
+    }
+    span {
+        height: 0.8rem;
+        background-color: $blanco;
+        margin-bottom: 0.6rem;
+        display: block;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.mostrar{
+    display: block;
+    opacity: 1;
+    height: auto;
+}
+

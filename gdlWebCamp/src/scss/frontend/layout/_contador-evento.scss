@@ -1,0 +1,61 @@
+.parallax::before {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8);
+    position: absolute;
+}
+
+.contador {
+    position: relative;
+    .contenido-contador{
+        position: relative;
+        @include grid(2,$separacion/2);
+        padding: 3rem 0;
+        @include tablet(){
+            @include grid(4,$separacion/2);
+            padding: 16rem 0;
+        }
+        p{
+            text-align: center;
+            margin: 0;
+            font-family: $fuente_terciaria;
+        }
+    }
+}
+.contador:before {
+    content: '';
+    background-image: url("../img/bg-resumen.webp");
+}
+
+.numero {
+    color: $naranja;
+    font-size: 5rem;
+    @include tablet() {
+        font-size: 11rem;
+        line-height: 1.2;
+    }
+}
+.etiqueta {
+    text-transform: uppercase;
+    color: $blanco;
+    @include tablet(){
+        font-size: 3.1rem;
+    }
+}
+
+.contador-dias {
+    .contenido-contador {
+        padding: 2rem 0;
+        @include tablet(){
+            width: 70%;
+        }
+    }
+    .etiqueta {
+        color: $negro;
+    }
+}
