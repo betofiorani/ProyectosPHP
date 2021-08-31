@@ -1,0 +1,16 @@
+.iconos-servicios {
+    @include tablet {
+        @include grid(3,$separacion);    
+    }
+    .icono {
+        text-align: center;
+        img {
+            width: auto;
+            height: 8rem;
+            margin: 0 auto;
+        }
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+}

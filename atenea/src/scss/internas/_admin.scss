@@ -1,0 +1,46 @@
+.alerta {
+    line-height: 1.8;
+    text-align: center;
+    color: $blanco;
+    font-weight: $bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    &.error {
+        background-color: $rojo;
+    }
+    &.exito {
+        background-color: $verde;
+    }
+}
+
+
+table.propiedades {
+    margin-top: 4rem;
+    width: 100%;
+    thead {
+        background-color: $morado;
+        th {
+            color: $blanco;
+            padding: .5rem;
+        }
+    }
+    .imagen-tabla {
+        width: 10rem;
+    }
+    td {
+        text-align: center;
+    }
+    .td-imagen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+    
+}
+
+.imagen-small {
+    width: 20rem;
+    margin-bottom: 2rem;
+}

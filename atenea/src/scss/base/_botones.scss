@@ -1,0 +1,29 @@
+.boton {
+    @include boton($morado , $bold , $blanco, inline-block);
+}
+
+.boton-morado {
+    @include boton($morado , $bold , $blanco, block);
+}
+
+.boton-morado-inline {
+    @include boton($morado , $bold , $blanco, inline-block);
+}
+
+.boton-verde {
+    @include boton($verde , $bold , $blanco, inline-block);
+}
+
+.boton-rojo-block {
+    @include boton($rojo , $bold , $blanco, block);
+}
+.boton-verde-block {
+    @include boton($verde , $bold , $blanco, block);
+}
+
+.boton-admin {
+    margin-top:0.5rem;
+    padding: 0.5rem 3rem;
+    line-height: 1.8;
+    width: 100%;
+}

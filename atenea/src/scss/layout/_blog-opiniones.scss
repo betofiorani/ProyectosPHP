@@ -1,0 +1,84 @@
+@include tablet(){
+    .blog-opiniones {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: $separacion/2;
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+    @include tablet(){
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: $separacion/3;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    .entrada-texto {
+        a {
+            text-decoration: none;
+        }
+        h4 {
+            margin: 1rem 0 0 0;
+            color: $negro;
+            line-height: 1.4;
+            &::after {
+                content: '';
+                background-color: $morado;
+                display: block;
+                width: 15rem;
+                height: .5rem;
+                margin-top: .5rem;
+            }
+            @include tablet {
+                margin: 0;
+            }
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.8rem;
+        }
+        
+    }
+}
+
+.informacion-meta {
+
+    span {
+        color: $morado;
+    }
+}
+
+.opiniones{
+    .opinion {
+        background-color: $morado;
+        border-radius: 2rem;
+        padding: $separacion/3;
+        color: $blanco;
+        font-size: 2.1rem;
+        font-weight: $delgada;
+        
+    }
+    blockquote{
+        position: relative;
+        padding-left: 4rem;
+        line-height: 1.4;
+        &::before {
+            content: '';
+            background-image: url('../img/comilla.svg');
+            background-repeat: no-repeat;
+            width: 8rem;
+            height: 6rem;
+            display: block;
+            position: absolute;
+            left: -2.5rem;
+        }
+    }
+    p{
+        text-align: right;
+        color: $blanco;
+    }
+}

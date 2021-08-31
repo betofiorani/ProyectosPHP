@@ -1,0 +1,73 @@
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet(){
+        align-items: flex-end;
+    }
+    .dark-mode-boton {
+        filter: invert(100%);
+        width: 3rem;
+        margin: 2rem 0;
+        @include tablet(){
+            margin: 0 0 2rem 0;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.barra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @include tablet(){
+        flex-direction: row;
+    }
+}
+
+.navegacion{
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+    @include tablet(){
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        //gap: 0.5rem; podemos usar gap - no soportado en todos lados.
+    }
+    .navegacion-enlace{
+        text-decoration: none;
+        color: $blanco;
+        font-size: 1.8rem;
+        padding: 0 0.5rem;
+        display: block;
+        @include tablet(){ // se podría hacer con gap - pero no tiene aún tanto soporte
+            margin-right: 0.5rem;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        &:hover {
+            color: $verde;
+        }
+    }
+}
+.mobile-menu {
+    @include tablet(){
+        display: none;
+    }
+    img {
+        width: 5rem;
+    }
+}
+
+.mostrar{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
